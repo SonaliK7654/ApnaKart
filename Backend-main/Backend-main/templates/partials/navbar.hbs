@@ -1,0 +1,60 @@
+<nav>
+  <div class="topnav">
+    <li class="brand"><img
+        src="images/logo.png"
+        style="width: 84px; cursor:pointer"
+        alt=""
+      /><a href=" /">𝔸𝕡𝕟𝕒𝕂𝕒𝕣𝕥</a>
+    </li>
+    <li> <a href="/">Home</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/contact">Contact</a></li>
+    <div class="search-container">
+      <input
+        type="text"
+        id="search-input"
+        placeholder="Search item"
+        onkeyup="search()"
+      />
+      <div
+        id="search-results"
+        style="background-color: rgb(191, 235, 237);"
+      ></div>
+    </div>
+    {{!-- <img
+      src="images/search.jpg"
+      alt=""
+      style="height: 31px;width: 35px;margin-top: 7px; cursor: pointer;"
+      onclick="window.location.href=''; class="search-btn"
+    /> --}}
+    <li class="cart"><img
+        onclick="window.location.href='/cart';"
+        src="images/cart.png"
+        style="cursor: pointer; padding:0%"
+      /></li><li style="padding: 0px;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.25rem;
+}"><a  href="/404">Sell</a></li>
+    {{#if loggedIn}}
+      <input
+        style="padding:5px"
+        class="logout"
+        id="logout-btn"
+        onclick="direct()"
+        type="button"
+        value="Dashboard"
+      />
+    {{else}}
+      <input
+        style="padding:5px"
+        class="login"
+        id="login-btn"
+        onclick="redirectToNewPage()"
+        type="button"
+        value="Login"
+      />
+    {{/if}}
+
+  </div>
+</nav>
